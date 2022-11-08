@@ -4,14 +4,14 @@ The instructions for project 3 can be found [here](https://github.com/mikeizbick
 
 The python file titled `ebay.dl` contains codes to scrape information from ebay and to store the results in `.json` or `.csv` files. The files contain information about the `name` of the item, the `price` of the item in cents, the `status` of the item stating whether the item is "Brand New", "Refurbished", "Pre-owned", etc., the price of `shipping` in cents, a boolean value for whether the item has `free_returns`, and the number of `items_sold` (as an integer).
 
-To run the python file, use the following command line:
+The following command runs the file of the specified search term:
 ```
-$ python3 ebay-dl.py 'bouncy ball'
+$ python3 ebay-dl.py 'search term'
 ```
-where `'bouncy ball'` can be replaced by the search term of your choice. If your search term contains multiple words, be sure to use quotation marks! By deafult, the program downloads the first 10 pages of the eBay search query. If you wish to adjust this to your fancy, simply use the following command line:
+This will then generate a json file for the search term that includes the first 10 pages of the eBay search query. However, you are able to change how many pages to download with the following command:
 ```
-$ python3 ebay-dl.py 'bouncy ball' --num_pages=5
+$ python3 ebay-dl.py 'search term' --num_pages=3
 ```
-where `5` can be replaced by the number of pages you want. By deafult, the program downloads the search queries in `.json` format. If you wish to change the download format to `.csv`, simply add the command line flag `--csv` like below:
+Here, the code will run through the first 3 pages. By deafult, the program downloads the search queries in `.json` format. If you wish to change the download format to `.csv`, simply add the command line flag `--csv` like below:
 ```
 $ python3 ebay-dl.py 'bouncy ball' --csv
