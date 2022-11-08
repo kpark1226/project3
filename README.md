@@ -12,6 +12,8 @@ This will then generate a json file for the search term that includes the first 
 ```
 $ python3 ebay-dl.py 'search term' --num_pages=3
 ```
-Here, the code will run through the first 3 pages. By deafult, the program downloads the search queries in `.json` format. If you wish to change the download format to `.csv`, simply add the command line flag `--csv` like below:
+Here, the code will run through the first 3 pages. 
+
+The commands above generate `.json` files, and you can add `--csv` at the end of the command to create `.csv` files:
 ```
-$ python3 ebay-dl.py 'bouncy ball' --csv
+$ python3 ebay-dl.py 'search term' --csv
